@@ -1,1 +1,1 @@
-# Desmos-Midi
+# Midi to Desmos Converter
