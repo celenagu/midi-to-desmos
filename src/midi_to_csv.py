@@ -6,10 +6,12 @@ from mido import MidiFile
 def midi_to_freq(n):
     return 440.0*2**((n-69) / 12.0)
 
+# Convert ticks to time in ms
 def ticks_to_time(ticks, tpb, tempo):
     us_per_tick = tempo / tpb
-    return ticks * us_per_tick / 1000000.0
+    return ticks * us_per_tick / 1000.0
 
+# Convert midi to csv file
 def midi_to_csv(file_name):
     in_file = "midi_files/" + file_name + ".mid"
     out_file = "output/" + file_name + ".csv"
@@ -102,12 +104,10 @@ def midi_to_csv(file_name):
         log.write(log_data)
         
     print(f"CSV file saved as: {out_file}")
+    print(f"Log file saved as: {log_file}")
             
 # file names
 print()
-# file_name = input("Enter the name of the .mid file you would like to convert (do not include the file extension): ")
-file_name = "twinkle-twinkle-little-star"
-# file_name = "Beethoven - Fur Elise"
-# file_name = "canon-3"
+file_name = input("Enter the name of the .mid file you would like to convert (do not include the file extension): ")
 
 midi_to_csv(file_name)

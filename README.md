@@ -11,7 +11,7 @@ A program that converts data from MIDI files into a CSV format, allowing for imp
 ## Desmos Integration
 
 A corresponding Desmos project has been created with the necessary functions to represent the output table within Desmos. A sample song is already present in the project. 
-[View Desmos project](https://www.desmos.com/calculator/747omxc8jw)
+[View Desmos project](https://www.desmos.com/calculator/opijc7jqhy)
 
 ## Requirements
 
@@ -39,7 +39,7 @@ pip install -r requirements.txt
 
 5. Importing into Desmos:
     1. Open the CSV file in a plain text editor and copy all text in the file. 
-    2. Visit the Desmos project created for this tool: [View Desmos project](https://www.desmos.com/calculator/747omxc8jw)
+    2. Visit the Desmos project created for this tool: [View Desmos project](https://www.desmos.com/calculator/opijc7jqhy)
     3. Delete the pre-existing table. 
     4. Paste the text from the generated CSV file into Desmos. 
 
