@@ -38,10 +38,10 @@ desmos-midi/
 4. All output files will be saved in the `output` folder. A CSV file will contain musical information in a Desmos-friendly format, and a `.txt` file contains MIDI data in a human-readable format.
 
 5. Importing into Desmos:
-  a. Open the CSV file in a plain text editor and copy all text in the file. 
-  b. Visit the Desmos project created for this tool: [View Desmos project](https://www.desmos.com/calculator/euq9lchg8i)
-  c. Delete the pre-existing table. 
-  d. Paste the text from the generated CSV file into Desmos. 
+    a. Open the CSV file in a plain text editor and copy all text in the file. 
+    b. Visit the Desmos project created for this tool: [View Desmos project](https://www.desmos.com/calculator/euq9lchg8i)
+    c. Delete the pre-existing table. 
+    d. Paste the text from the generated CSV file into Desmos. 
 
 6. Set the slider for the *t* variable to 0 and press play on the ticker function. 
 
