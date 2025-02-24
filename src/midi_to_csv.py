@@ -1,3 +1,4 @@
+import os
 import csv
 from mido import MidiFile
 
@@ -7,13 +8,12 @@ def midi_to_freq(n):
 
 def ticks_to_time(ticks, tpb, tempo):
     us_per_tick = tempo / tpb
-    return ticks * us_per_tick / 500000.0
-
+    return ticks * us_per_tick / 1000000.0
 
 def midi_to_csv(file_name):
     in_file = "midi_files/" + file_name + ".mid"
-    out_file = file_name + ".csv"
-    log_file = file_name + "_log.txt"
+    out_file = "output/" + file_name + ".csv"
+    log_file = "output/" + file_name + "_log.txt"
     
     print(f"Reading midi file {in_file}")
     
@@ -74,14 +74,16 @@ def midi_to_csv(file_name):
                     # complete row with end time
                     note_data = active_notes.pop(note)
                     note_data["b"] = ms_time    # creates new key in data from dictionary index
-                    events.append(note_data)    # adds to new line
-                    
+                    events.append(note_data)    # adds to new line  
 
     # Finished processing all midi tracks (for i, track in enumerate(midi.tracks):)
     
     # Sort events in chronological order
     events.sort(key=lambda x: x["a"]) 
-    
+
+    # Ensure output directory exists
+    if not os.path.exists("output"):
+        os.makedirs("output")
     
     # Write to csv file
     with open(out_file, 'w', newline='') as csvfile:
@@ -103,12 +105,9 @@ def midi_to_csv(file_name):
             
 # file names
 print()
-
-# file_name = input("Enter the name of the .mid file you would like to convert (do not include the file type): ")
+file_name = input("Enter the name of the .mid file you would like to convert (do not include the file extension): ")
 # file_name = "twinkle-twinkle-little-star"
 # file_name = "Beethoven - Fur Elise"
-file_name = "canon-3"
-# in_file = "midi_files/" + file_name + ".mid"
-
+# file_name = "canon-3"
 
 midi_to_csv(file_name)
