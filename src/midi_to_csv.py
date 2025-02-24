@@ -105,8 +105,8 @@ def midi_to_csv(file_name):
             
 # file names
 print()
-file_name = input("Enter the name of the .mid file you would like to convert (do not include the file extension): ")
-# file_name = "twinkle-twinkle-little-star"
+# file_name = input("Enter the name of the .mid file you would like to convert (do not include the file extension): ")
+file_name = "twinkle-twinkle-little-star"
 # file_name = "Beethoven - Fur Elise"
 # file_name = "canon-3"
 
