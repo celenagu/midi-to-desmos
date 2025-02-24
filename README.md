@@ -24,12 +24,12 @@ pip install -r requirements.txt
 ## Instructions
 
 1. Place all MIDI files you want to convert in the `midi-files` folder. 
-        ``` vbnet
-        desmos-midi/
-        └── midi_files/
-            ├── song1.mid
-            └── song2.mid
-        ```
+    ``` vbnet
+    desmos-midi/
+    └── midi_files/
+        ├── song1.mid
+        └── song2.mid
+    ```
 
 2. Open terminal in the repository's root directory and run `midi_to_csv.py`.
 
